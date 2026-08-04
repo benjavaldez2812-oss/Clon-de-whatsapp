@@ -1,0 +1,12 @@
+.chatList {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--wa-bg-sidebar);
+}
+
+.empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--wa-text-secondary);
+  font-size: 0.9rem;
+}

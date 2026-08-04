@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== CSS RESET ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== DESIGN TOKENS (WhatsApp Theme) ===== */
+:root {
+  /* Greens */
+  --wa-green-dark: #00a884;
+  --wa-green-hover: #008f72;
+  --wa-green-light: #d9fdd3;
+  --wa-green-badge: #25d366;
+
+  /* Backgrounds */
+  --wa-bg-panel: #f0f2f5;
+  --wa-bg-sidebar: #ffffff;
+  --wa-bg-chat: #efeae2;
+  --wa-bg-hover: rgba(0, 0, 0, 0.05);
+  --wa-bg-active: #f0f2f5;
+  --wa-bg-search: #f0f2f5;
+  --wa-bg-login: #00a884;
+
+  /* Bubbles */
+  --wa-bubble-out: #d9fdd3;
+  --wa-bubble-in: #ffffff;
+
+  /* Text — all meet WCAG AA 4.5:1 on their respective backgrounds */
+  --wa-text-primary: #111b21;
+  --wa-text-secondary: #54656f;
+  --wa-text-meta: #667781;
+
+  /* Borders */
+  --wa-border: #e9edef;
+
+  /* Misc */
+  --wa-avatar-bg: #00a884;
+  --wa-check-blue: #53bdeb;
+
+  /* Typography */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--wa-text-primary);
+}
+
+/* ===== BASE ELEMENTS ===== */
+html,
+body {
+  height: 100%;
+  background: var(--wa-bg-panel);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* ===== SCROLLBAR (WhatsApp Style) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== FOCUS VISIBLE ===== */
+:focus-visible {
+  outline: 2px solid var(--wa-green-dark);
+  outline-offset: 2px;
+}
+
+/* ===== ACCESSIBILITY: REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

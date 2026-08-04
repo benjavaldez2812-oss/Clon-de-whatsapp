@@ -1,0 +1,43 @@
+.searchBar {
+  padding: 8px 12px;
+  background: var(--wa-bg-panel);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  background: var(--wa-bg-search);
+  border-radius: 8px;
+  padding: 6px 12px;
+  gap: 12px;
+}
+
+.icon {
+  color: var(--wa-text-secondary);
+  flex-shrink: 0;
+}
+
+.input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--wa-text-primary);
+  width: 100%;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: var(--wa-text-secondary);
+}

@@ -1,0 +1,72 @@
+.inputBar {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+  background: var(--wa-bg-panel);
+  border-top: 1px solid var(--wa-border);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: var(--wa-bg-search);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  color: var(--wa-text-primary);
+  outline: none;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: var(--wa-text-secondary);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px var(--wa-green-dark);
+}
+
+.sendBtn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: var(--wa-green-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.sendBtn:hover:not(:disabled) {
+  background: var(--wa-green-hover);
+}
+
+.sendBtn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.sendBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sendBtn:focus-visible {
+  outline: 2px solid var(--wa-green-dark);
+  outline-offset: 2px;
+}
